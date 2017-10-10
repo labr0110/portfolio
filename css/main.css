@@ -202,6 +202,7 @@ label.nav-label::before{
   height: 100%;
   width: 100%;
   margin: auto;
+    text-align: center;
 
 }
 
@@ -218,15 +219,44 @@ label.nav-label::before{
   opacity: 1;
 }
 
-.portfolio-card {
+.wrapper {
   width: 100%;
-  background-color: #ccc;
+  margin: 0 auto;
+  position: relative;
   display: table;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.img-portfolio {
+  opacity: 1;
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: .5s ease;
 }
 
 .portfolio-content {
-  position: relative;
+  position: absolute;
+  top: 35%;
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+  color: #000;
+  font-size: 200%;
+}
 
+.overlay {
+  opacity: 0;
+}
+
+.wrapper:hover .img-portfolio {
+  opacity: .4;
+}
+
+.wrapper:hover .overlay {
+  opacity: 1;
 }
 
 .typography, .illustration, .photography {
