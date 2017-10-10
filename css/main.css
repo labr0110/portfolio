@@ -202,7 +202,7 @@ label.nav-label::before{
   height: 100%;
   width: 100%;
   margin: auto;
-    text-align: center;
+  text-align: center;
 
 }
 
@@ -259,10 +259,6 @@ label.nav-label::before{
   opacity: 1;
 }
 
-.typography, .illustration, .photography {
-  background-color: #ccc;
-}
-
 .jsportfoliocontent {
   opacity: 0;
   transition: all 350ms ease-in;
@@ -271,6 +267,102 @@ label.nav-label::before{
 .js-jsportfoliocontent-animate {
   opacity: 1;
 }
+
+label.overlay {
+  position: fixed;
+  display: none;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+
+input[type=checkbox].smoosh:checked - label.overlay {
+  display: block;
+  z-index: 1000;
+}
+
+div.overlay-dialogue {
+  position: fixed;
+  display: none;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 15%;
+  bottom: 15%;
+  background: whitesmoke;
+}
+
+input[type=checkbox].smoosh:checked ~ div.overlay-dialogue {
+  display: block;
+  z-index: 1050;
+}
+
+.smoosh {
+  display: none;
+  line-height: 0;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  color: transparent;
+  background: transparent;
+  border: none;
+  outline: none;
+  height: 0;
+  width: 0;
+}
+
+label.overlay {
+  background-color: rgba(0, 0, 0, .5);
+  text-align: center;
+  color: rgba(200, 200, 200, .5);
+  line-height: 120%;
+}
+
+label.overlay:hover, label.overlay:active {
+  line-height: 120%;
+  color: darkgrey;
+}
+
+label.overlay:active {
+  line-height: 130%;
+}
+
+label.overlay:before {
+  content: "Tap here to dismiss";
+}
+
+label {
+  line-height: 120%;
+  color: #000;
+}
+
+label:hover {
+  color: orangered;
+}
+
+label:active {
+  line-height: 90%;
+  color: orange;
+}
+
+div.overlay-dialogue {
+  padding: 20pt 5% 20pt 5%;
+  overflow-y: auto;
+  animation: START 0.3s ease-in-out;
+  top: 24pt;
+  bottom: 24pt;
+}
+
+@keyframes START {
+  0% {transform: rotateY(55deg); opacity: 0;}
+  100% {transform: rotateY(0deg); opacity: 1;}
+}
+
+label.overlay-popup::before{
+  display: none;
+}
+
 
 footer {
   background-color: #ccCCCC;
