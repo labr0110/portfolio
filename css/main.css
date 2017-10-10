@@ -23,23 +23,64 @@ img.toggle {
   position: absolute;
 }
 
-.nav-label {
+.nav-open,
+.nav-close {
+  display: block;
+  width: 100%;
+  margin: 1.5em 0em;
+}
+
+
+.nav-close {
+  display: none;
+}
+
+.nav-check {
   position: absolute;
-  right: -0.5em;
+  bottom: -8em;
+}
+
+label.nav-label::before{
+  display: none;
+}
+
+.nav-check:checked ~ .nav-label .nav-open {
+  display: none;
+}
+
+.nav-check:checked ~ .nav-label .nav-close {
+  display: block;
+  z-index: 100;
+}
+
+.nav-label {
+  cursor: pointer;
+  position: absolute;
+  right: 1em;
   top: 0;
 }
 
 .nav-check:checked ~ .nav {
   display: block;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
   position: absolute;
-  top: 5em;
-  right: 1em;
+  right: 0;
+  top: 2em;
+  width: 100%;
+  height: 5em;
 }
 
-.nav-check {
-  /* Put the checkbox off the top of the screen */
-  position: absolute;
-  top: -3em;
+.nav-check:checked ~ .nav .nav-logo {
+  display: none;
+}
+
+.nav-check:checked ~ .nav .main-nav-link {
+  font-size: 80%;
+  padding: .2em;
+  margin: 0;
 }
 
 .main-nav-link {
@@ -60,12 +101,20 @@ img.toggle {
   margin-right: 10px;
 }
 
+.nav-logo-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 1em;
+}
+
 .mainnav {
   z-index: 1000;
   position: absolute;
   width: 97%;
   margin: 10px;
 }
+
 
 .banner {
   position: relative;
@@ -150,8 +199,14 @@ img.toggle {
 }
 
 .the-designer {
-  background-color: #f1f1f1;
-  padding: 20px 20px;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+
+}
+
+.the-designer-paragraph {
+  text-align: center;
 }
 
 .jsaboutmecontent {
@@ -161,21 +216,6 @@ img.toggle {
 
 .js-jsaboutmecontent-animate {
   opacity: 1;
-}
-
-.the-designer-content {
-  text-align: center;
-}
-
-.the-designer-paragraph {
-  text-align: center;
-}
-
-.title-square-svg {
-  width: 45%;
-  position: relative;
-  top: 40px;
-  left: 43px;
 }
 
 .portfolio-card {
@@ -251,6 +291,11 @@ footer {
     font-size: 70%;
   }
 
+  .nav-check:checked ~ .nav .main-nav-link {
+    font-size: 80%;
+    padding: .5em;
+    margin: 0;
+
 }
 
 @media only screen and (min-width: 38em) {
@@ -267,6 +312,12 @@ footer {
     font-size: 70%;
   }
 
+  .nav-check:checked ~ .nav .main-nav-link {
+    font-size: 80%;
+    padding: 1.3em;
+    margin: 0;
+  }
+}
 
 @media only screen and (min-width: 60em) {
 
@@ -281,6 +332,16 @@ footer {
 
   .header {
     padding-bottom: 1.3em;
+  }
+
+  .nav-check:checked ~ .nav .main-nav-link {
+    font-size: 80%;
+    padding: 2em;
+    margin: 0;
+  }
+
+  .nav-logo-2 {
+    display: none;
   }
 
 }
