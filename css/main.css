@@ -97,6 +97,8 @@ label.nav-label::before{
 }
 
 .nav-logo {
+  display: block;
+  top: 1.5em;
   margin-left: 10px;
   margin-right: 10px;
 }
@@ -277,7 +279,6 @@ label.overlay {
   top: 0;
 }
 
-
 input[type=checkbox].smoosh:checked - label.overlay {
   display: block;
   z-index: 1000;
@@ -291,7 +292,7 @@ div.overlay-dialogue {
   right: 0;
   top: 15%;
   bottom: 15%;
-  background: whitesmoke;
+  background-color: #fff;
 }
 
 input[type=checkbox].smoosh:checked ~ div.overlay-dialogue {
@@ -363,9 +364,125 @@ label.overlay-popup::before{
   display: none;
 }
 
+.project-title {
+  position: absolute;
+  top: 2em;
+  left: 38%;
+  z-index: 2000;
+}
+
+.carousel-items > div {
+  display: none;
+}
+
+#step-1-case-1-control:checked ~ .carousel-inner #step-1-case-1,
+#step-2-case-1-control:checked ~ .carousel-inner #step-2-case-1,
+#step-3-case-1-control:checked ~ .carousel-inner #step-3-case-1,
+#step-4-case-1-control:checked ~ .carousel-inner #step-4-case-1 {
+  display: block;
+}
+
+.carousel-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+#step-1-case-1-control:checked ~ .carousel-inner [for="step-1-case-1-control"],
+#step-2-case-1-control:checked ~ .carousel-inner [for="step-2-case-1-control"],
+#step-3-case-1-control:checked ~ .carousel-inner [for="step-3-case-1-control"],
+#step-4-case-1-control:checked ~ .carousel-inner [for="step-4-case-1-control"] {
+  background-color: #fff;
+}
+
+#step-1-case-2-control:checked ~ .carousel-inner #step-1-case-2,
+#step-2-case-2-control:checked ~ .carousel-inner #step-2-case-2,
+#step-3-case-2-control:checked ~ .carousel-inner #step-3-case-2,
+#step-4-case-2-control:checked ~ .carousel-inner #step-4-case-2 {
+  display: block;
+}
+
+.carousel-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+#step-1-case-2-control:checked ~ .carousel-inner [for="step-1-case-2-control"],
+#step-2-case-2-control:checked ~ .carousel-inner [for="step-2-case-2-control"],
+#step-3-case-2-control:checked ~ .carousel-inner [for="step-3-case-2-control"],
+#step-4-case-2-control:checked ~ .carousel-inner [for="step-4-case-2-control"] {
+  background-color: #fff;
+}
+
+#step-1-case-3-control:checked ~ .carousel-inner #step-1-case-3,
+#step-2-case-3-control:checked ~ .carousel-inner #step-2-case-3,
+#step-3-case-3-control:checked ~ .carousel-inner #step-3-case-3,
+#step-4-case-3-control:checked ~ .carousel-inner #step-4-case-3 {
+  display: block;
+}
+
+.carousel-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+#step-1-case-3-control:checked ~ .carousel-inner [for="step-1-case-3-control"],
+#step-2-case-3-control:checked ~ .carousel-inner [for="step-2-case-3-control"],
+#step-3-case-3-control:checked ~ .carousel-inner [for="step-3-case-3-control"],
+#step-4-case-3-control:checked ~ .carousel-inner [for="step-4-case-3-control"] {
+  background-color: #fff;
+}
+
+#step-1-case-4-control:checked ~ .carousel-inner #step-1-case-4,
+#step-2-case-4-control:checked ~ .carousel-inner #step-2-case-4,
+#step-3-case-4-control:checked ~ .carousel-inner #step-3-case-4,
+#step-4-case-4-control:checked ~ .carousel-inner #step-4-case-4 {
+  display: block;
+}
+
+.carousel-btn {
+  border: 2px solid #fff;
+  border-radius: 50%;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+}
+
+#step-1-case-4-control:checked ~ .carousel-inner [for="step-1-case-4-control"],
+#step-2-case-4-control:checked ~ .carousel-inner [for="step-2-case-4-control"],
+#step-3-case-4-control:checked ~ .carousel-inner [for="step-3-case-4-control"],
+#step-4-case-4-control:checked ~ .carousel-inner [for="step-4-case-4-control"] {
+  background-color: #fff;
+}
+
 
 footer {
-  background-color: #ccCCCC;
+  background-color: #ccc;
+}
+
+.popup-close {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  overflow: hidden;
+  background-color: #ccc;
+  border: solid 4px #ccc;
 }
 
 .footer-contact {
