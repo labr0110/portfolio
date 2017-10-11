@@ -225,7 +225,6 @@ label.nav-label::before{
   width: 100%;
   margin: 0 auto;
   position: relative;
-  display: table;
   height: 100%;
   width: 100%;
   top: 0;
@@ -241,12 +240,18 @@ label.nav-label::before{
 
 .portfolio-content {
   position: absolute;
-  top: 35%;
-  display: table-cell;
-  vertical-align: middle;
+  top: 38%;
   width: 100%;
   color: #000;
   font-size: 200%;
+}
+
+.portfolio-card-btn {
+  background-color: #ccc;
+  margin-left: 14em;
+  margin-right: 14em;
+  padding-top: .5em;
+  padding-bottom: .5em;
 }
 
 .overlay {
@@ -360,8 +365,10 @@ div.overlay-dialogue {
   100% {transform: rotateY(0deg); opacity: 1;}
 }
 
-label.overlay-popup::before{
-  display: none;
+
+label.overlay-popup {
+  position: absolute;
+  top: -9em;
 }
 
 .project-title {
@@ -370,6 +377,7 @@ label.overlay-popup::before{
   left: 38%;
   z-index: 2000;
 }
+
 
 .carousel-items > div {
   display: none;
