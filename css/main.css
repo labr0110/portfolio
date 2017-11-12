@@ -92,14 +92,14 @@ label.nav-label::before{
 
 .nav-logo {
   display: block;
-  top: 1.5em;
+  top: 1.2em;
   margin-left: 10px;
   margin-right: 10px;
 }
 
 .nav-logo-2 {
   position: absolute;
-  top: 0;
+  top: -0.1;
   left: 0;
   margin: 1em;
 }
@@ -148,7 +148,6 @@ label.nav-label::before{
   vertical-align: middle;
   margin: 0 auto;
   text-align: center;
-  margin-top: 70px;
 }
 
 
@@ -162,6 +161,7 @@ label.nav-label::before{
   font-size: 250%;
   margin: 0.2em;
   line-height: 1.1;
+  margin-top: 1em;
 }
 
 .banner-title-2 {
@@ -340,6 +340,11 @@ label.overlay-popup {
   z-index: 2000;
 }
 
+.grid-carousel {
+  height: 100vh;
+  width: 100vh;
+}
+
 .carousel-items > div {
   display: none;
 }
@@ -356,8 +361,7 @@ label.overlay-popup {
   border-radius: 50%;
 }
 
-.carousel {
-  width: 100%;
+.carousel-container {
   height: 100%;
 }
 
@@ -406,7 +410,7 @@ label.overlay-popup {
 
 .carousel {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 }
 
 #step-1-case-3-control:checked ~ .carousel-inner [for="step-1-case-3-control"],
